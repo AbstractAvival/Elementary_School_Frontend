@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  primary_school_frontend:
+    image: elementary_school_frontend:1.0
+    container_name: elementary_school_frontend
+    build: ../
+    ports: 
+      - ${ELEMENTARY_SCHOOL_FRONTEND_PORT}:3000
+    environment:
+      - NEXT_PUBLIC_AUTHENTICATION_TYPE=${AUTHENTICATION_TYPE}
+      - NEXT_PUBLIC_ELEMENTARY_SCHOOL_FRONTEND_CONTAINER_NAME=${ELEMENTARY_SCHOOL_FRONTEND_CONTAINER_NAME}
+    networks:
+      - elementary-school-frontend
+    volumes:
+      - ../:/app
+
+networks:
+  elementary-school-frontend:
