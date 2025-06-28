@@ -3,6 +3,9 @@
 // react imports
 import { createContext, useContext, useState, useEffect } from "react"
 
+// axios
+import { axios } from "/utilities/api/axios"
+
 // contexts
 import { UserContext } from "/components/contexts/UserContext"
 
