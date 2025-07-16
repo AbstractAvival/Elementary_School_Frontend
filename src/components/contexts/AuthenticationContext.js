@@ -4,10 +4,10 @@
 import { createContext, useContext, useState, useEffect } from "react"
 
 // axios
-import { axios } from "/utilities/api/axios"
+import { axios } from "@/utilities/api/axios"
 
 // contexts
-import { UserContext } from "/components/contexts/UserContext"
+import { UserContext } from "@/components/contexts/UserContext"
 
 const defaultAuthentication = {
     loading: false,
